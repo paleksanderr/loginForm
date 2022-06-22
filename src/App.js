@@ -1,17 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function App() {
-const adminUser = {
-  email: 'admin@admin.com',
-  password: 'admin',
+    const adminUser = {
+        email: "admin@admin.com",
+        password: "admin",
+    };
 
-}
+    const [user, setUser] = useState({ name: "", email: "" });
+    const [error, setError] = useState("");
 
-  return (
-    <div className="App">
+    const Login = (details) => {
+        console.log(details);
+    };
 
-    </div>
-  );
+    const Logout = () => {
+        console.log("logout");
+    };
+
+    return <div className="App">
+        {(user.email !== '') ? (
+            
+        ) : ''}
+    </div>;
 }
 
 export default App;
