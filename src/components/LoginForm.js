@@ -4,7 +4,7 @@ const LoginForm = ({ Login, error }) => {
     const [details, setDetails] = useState({name:'', email:'', password: ''})
 
     const submitHandler = e => {
-        e.preventDefoult();
+        e.preventDefault();
         Login(details)
 
     }
@@ -19,13 +19,13 @@ const LoginForm = ({ Login, error }) => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
-                    <input type="email" name="email" id="email" onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
+                    <input type="email" name="email" id="email"  />
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
-                    <input type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details:password} />
+                    <input type="password" name="password" id="password"  />
                 </div>
-                <input type="submit" value="Login" />
+                <input type="submit" value="LOGIN" />
             </div>
               
         </form>
