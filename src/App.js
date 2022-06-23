@@ -21,6 +21,7 @@ function App() {
         }
         else{
             console.log('Deatails do not match')
+            setError('Deatails do not match')
         }
     };
 
